@@ -1,0 +1,58 @@
+body {
+    font-family: Gotham, Optima, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+.footer-text {
+    overflow: hidden;
+    padding: 20px;
+    zoom: 1;
+    border-radius: 7px 7px 7px 7px;
+    font-size: 1em;
+    background-color: peachpuff;
+}
+.menu-list {
+    margin: 0px;
+    padding: 0px;
+}
+.feed-entry {
+    margin-top: 10px;
+}
+.link {
+    color: purple;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    transition: all linear .3s .01s;
+}
+.link:hover {
+    display: block;
+    cursor:pointer;
+    color: #FFF;
+    border-color: #FFF;
+    background-color: #5285AB;
+    text-decoration: none;
+}
+.content {
+    border-left: 4px double mediumpurple;
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    background: #FFF4EA;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+.content:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 12px 10px;
+    border-color: #FFF4EA transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -10px;
+    left: 26px;
+}
+.content .prop {
+    display: block;
+}

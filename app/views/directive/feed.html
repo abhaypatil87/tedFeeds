@@ -1,0 +1,22 @@
+<div class="footer-text">
+    <div class="menu-list" ng-repeat="feed in feeds">
+        <div role="heading" aria-level="1">
+            <a target="_blank" href="{{feed.link}}">{{feed.title}}</a>
+            <span style="display: block;margin-top: 4px;">{{feed.description}}</span>
+        </div>
+        <div class="feed-entry" ng-repeat="item in feed.entries" ng-init="showFeed=false" aria-expanded="{{showFeed}}">
+            <a class="link" ng-keypress="showFeed =! showFeed" ng-click="showFeed = !showFeed" href="" role="heading" aria-level="2">
+                <i class="fa fa-caret-down" ng-class="!showFeed?'fa-caret-right':'fa-caret-down'"></i>
+                {{item.title}}
+            </a>
+            <div class="content" ng-show="showFeed">
+                <span class="prop published-date">Published on <i>{{item.publishedDate | dateFilter}}</i>, under <i>'{{item.categories[0]}}'</i></span>
+                <span class="prop summary" title="{{item.content}}"><b>Summary :</b> {{item.contentSnippet}}</span>
+                <a href="{{item.link}}" target="_blank">View Article</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-list" ng-if="feeds.length == 0">
+        <span>No Feeds To Show</span>
+    </div>
+</div>
